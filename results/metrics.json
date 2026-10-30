@@ -1,0 +1,134 @@
+{
+ "test_examples": 500,
+ "decoding": "greedy",
+ "max_new_tokens": 256,
+ "conditions": {
+  "base_zero_shot": {
+   "n": 500,
+   "execution_accuracy": 61.6,
+   "exact_match": 19.6,
+   "valid_sql_rate": 90.0,
+   "execution_accuracy_by_complexity": {
+    "aggregation": {
+     "acc": 45.5,
+     "n": 99
+    },
+    "basic SQL": {
+     "acc": 76.1,
+     "n": 289
+    },
+    "multiple_joins": {
+     "acc": 23.1,
+     "n": 13
+    },
+    "set operations": {
+     "acc": 25.0,
+     "n": 4
+    },
+    "single join": {
+     "acc": 50.0,
+     "n": 58
+    },
+    "subqueries": {
+     "acc": 47.4,
+     "n": 19
+    },
+    "window functions": {
+     "acc": 5.6,
+     "n": 18
+    }
+   },
+   "eval_minutes": 11.3,
+   "latency_single_request": {
+    "p50_ms": 2907,
+    "p95_ms": 5875,
+    "requests": 50
+   }
+  },
+  "base_3_shot": {
+   "n": 500,
+   "execution_accuracy": 60.4,
+   "exact_match": 21.8,
+   "valid_sql_rate": 88.6,
+   "execution_accuracy_by_complexity": {
+    "aggregation": {
+     "acc": 44.4,
+     "n": 99
+    },
+    "basic SQL": {
+     "acc": 73.0,
+     "n": 289
+    },
+    "multiple_joins": {
+     "acc": 38.5,
+     "n": 13
+    },
+    "set operations": {
+     "acc": 25.0,
+     "n": 4
+    },
+    "single join": {
+     "acc": 48.3,
+     "n": 58
+    },
+    "subqueries": {
+     "acc": 52.6,
+     "n": 19
+    },
+    "window functions": {
+     "acc": 16.7,
+     "n": 18
+    }
+   },
+   "eval_minutes": 19.9,
+   "latency_single_request": {
+    "p50_ms": 3294,
+    "p95_ms": 6620,
+    "requests": 50
+   }
+  },
+  "qlora_zero_shot": {
+   "n": 500,
+   "execution_accuracy": 71.8,
+   "exact_match": 36.0,
+   "valid_sql_rate": 96.8,
+   "execution_accuracy_by_complexity": {
+    "aggregation": {
+     "acc": 56.6,
+     "n": 99
+    },
+    "basic SQL": {
+     "acc": 83.4,
+     "n": 289
+    },
+    "multiple_joins": {
+     "acc": 53.8,
+     "n": 13
+    },
+    "set operations": {
+     "acc": 50.0,
+     "n": 4
+    },
+    "single join": {
+     "acc": 69.0,
+     "n": 58
+    },
+    "subqueries": {
+     "acc": 57.9,
+     "n": 19
+    },
+    "window functions": {
+     "acc": 11.1,
+     "n": 18
+    }
+   },
+   "eval_minutes": 9.0,
+   "latency_single_request": {
+    "p50_ms": 3420,
+    "p95_ms": 7543,
+    "requests": 50
+   }
+  }
+ },
+ "gpu": "Tesla T4"
+}
